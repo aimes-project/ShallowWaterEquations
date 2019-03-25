@@ -10,22 +10,22 @@
 #include <stdlib.h>
 
 // Fields defined using GGDML specifiers
-float CELL 2D f_H;
+float CELL 2D f_H;      /* Surface level and tendency  */
 float CELL 2D f_HT;
-float EDGE 2D f_U;
+float CELL 2D f_B;
+float EDGE 2D f_U;      /* Velocity and tendencies */
 float EDGE 2D f_UT;
 float EDGE 2D f_V;
 float EDGE 2D f_VT;
-float CELL 2D f_B;
-float EDGE 2D f_F;
+float EDGE 2D f_F;      /* Flux */
 float EDGE 2D f_G;
 
 // Scalars
-const float dx = 1.0;
+const float dx = 1.0;   /* Space and time intervals */
 const float dy = 1.0;
 const float dt = 0.001;
-const float g = 9.8; 
-const float f = 0.1;
+const float g  = 9.8;   /* Gravity */
+const float f  = 0.1;   /* Coriolis */
 
 /*****************************************************************************\
   Compute flux:
